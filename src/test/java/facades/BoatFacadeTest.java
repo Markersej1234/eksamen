@@ -1,8 +1,5 @@
 package facades;
 
-import edu.emory.mathcs.backport.java.util.Arrays;
-import dtos.BoatDTO;
-import entities.Boat;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

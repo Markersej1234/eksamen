@@ -4,9 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import dtos.ComboDTO;
-import dtos.PokemonDTO;
-import dtos.RandomFactDTO;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,9 +26,6 @@ import javax.ws.rs.core.SecurityContext;
 import entities.User;
 import facades.UserFacade;
 import utils.EMF_Creator;
-import utils.FactFetcher;
-import utils.HttpUtils;
-import utils.PokemonFetcher;
 
 
 /**
