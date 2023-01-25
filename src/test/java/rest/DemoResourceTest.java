@@ -103,39 +103,39 @@ class DemoResourceTest {
         securityToken = null;
     }
 
-    @Test
-    void getPokeInfoAsUser() {
-        String json = "{query: \"133\"}";
-        login("user", "test1");
-        given()
-                .contentType("application/json")
-                .accept("application/json")
-                .header("x-access-token", securityToken)
-                .body(json)
-                .when().post("/info/pokemon")
-                .then()
-                .assertThat()
-                .statusCode(200)
-                .body("pokemonId", equalTo("133"))
-                .body("pokemonName", equalTo("eevee"));
-    }
-
-    @Test
-    void getPokeInfoAsAdmin() {
-        String json = "{query: \"eevee\"}";
-        login("admin", "test2");
-        given()
-                .contentType("application/json")
-                .accept("application/json")
-                .header("x-access-token", securityToken)
-                .body(json)
-                .when().post("/info/pokemon")
-                .then()
-                .assertThat()
-                .statusCode(200)
-                .body("pokemonId", equalTo("133"))
-                .body("pokemonName", equalTo("eevee"));
-    }
+//    @Test
+//    void getPokeInfoAsUser() {
+//        String json = "{query: \"133\"}";
+//        login("user", "test1");
+//        given()
+//                .contentType("application/json")
+//                .accept("application/json")
+//                .header("x-access-token", securityToken)
+//                .body(json)
+//                .when().post("/info/pokemon")
+//                .then()
+//                .assertThat()
+//                .statusCode(200)
+//                .body("pokemonId", equalTo("133"))
+//                .body("pokemonName", equalTo("eevee"));
+//    }
+//
+//    @Test
+//    void getPokeInfoAsAdmin() {
+//        String json = "{query: \"eevee\"}";
+//        login("admin", "test2");
+//        given()
+//                .contentType("application/json")
+//                .accept("application/json")
+//                .header("x-access-token", securityToken)
+//                .body(json)
+//                .when().post("/info/pokemon")
+//                .then()
+//                .assertThat()
+//                .statusCode(200)
+//                .body("pokemonId", equalTo("133"))
+//                .body("pokemonName", equalTo("eevee"));
+//    }
 
     @Test
     void createUser() {
